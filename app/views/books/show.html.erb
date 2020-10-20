@@ -1,0 +1,9 @@
+<div class="space-left">
+  <% flash.each do |message_type, message| %>
+    <span class ="green"><%= message %></span>
+  <% end %>
+  <p><span style="font-weight: bolder;">Title:</span><%= @editted_book.title %></p>
+  <p><span style="font-weight: bolder;">Body:</span><%= @editted_book.body %></p>
+</div>
+<p class="left"><%= link_to 'Edit',edit_book_path(@editted_book.id) %></p>
+<p class="right"><%= link_to "back" , books_path %></p>
